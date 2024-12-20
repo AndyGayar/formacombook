@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+article {
+    height: auto;
+    max-width: 500px;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#secFotos {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.contenedorImg {
+    height: 200px;
+    width: calc(50% - 5px);
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contenedorImg:nth-child(2n) {
+    margin-right: 0;
+}
+
+/* Media Queries para hacer la página responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedorImg {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    article {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    article {
+        padding: 10px;
+    }
+}
